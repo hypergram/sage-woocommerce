@@ -76,6 +76,7 @@ class WooCommerce
         if (
             is_admin() &&
             !wp_doing_ajax() &&
+            function_exists('get_current_screen') &&
             get_current_screen() &&
             get_current_screen()->id === 'woocommerce_page_wc-status'
         ) {
